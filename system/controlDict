@@ -45,6 +45,7 @@ libs
 (
     // Needed for availability of porous baffle boundary in potentialFoam
     #include "turbulenceLib"
+    libfvOptions.so
 );
 
 functions

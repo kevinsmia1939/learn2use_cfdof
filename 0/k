@@ -22,16 +22,12 @@ boundaryField
 
     inlet
     {
-        type        turbulentIntensityKineticEnergyInlet;
-        intensity   0.01;
-        value       $internalField;
+        type        cyclic;
     }
 
     outlet
     {
-        type        inletOutlet;
-        inletValue  $internalField;
-        value       $internalField;
+        type        cyclic;
     }
 
     wall

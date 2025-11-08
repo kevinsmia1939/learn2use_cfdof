@@ -22,16 +22,12 @@ boundaryField
 
     inlet
     {
-        type            turbulentMixingLengthFrequencyInlet;
-        mixingLength    0.1;
-        value           $internalField;
+        type        cyclic;
     }
 
     outlet
     {
-        type        inletOutlet;
-        inletValue  $internalField;
-        value       $internalField;
+        type        cyclic;
     }
 
     wall

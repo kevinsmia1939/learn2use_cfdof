@@ -22,14 +22,12 @@ boundaryField
 
     inlet
     {
-        type        zeroGradient;
+        type        cyclic;
     }
 
     outlet
     {
-        type        totalPressure;
-        p0          uniform 100.20040080160321;
-        value       $internalField;
+        type        cyclic;
     }
 
     wall
