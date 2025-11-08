@@ -22,22 +22,12 @@ boundaryField
 
     inlet
     {
-        type                uniformFixedValue;
-        uniformValue        sine;
-        uniformValueCoeffs
-        {
-            frequency       2;              // [Hz] pulsation frequency
-            amplitude       0.0155;         // peak deviation from the mean speed
-            scale           (0 1 0);        // align pulsation with the inlet normal
-            level           (0 0.031 0);    // mean velocity vector
-        }
-        value               uniform (0 0.031 0);
+        type        cyclic;
     }
 
     outlet
     {
-        type        pressureInletOutletVelocity;
-        value       $internalField;
+        type        cyclic;
     }
 
     wall

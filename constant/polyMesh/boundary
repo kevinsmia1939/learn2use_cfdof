@@ -16,12 +16,16 @@ FoamFile
 (
     inlet
     {
-        type        patch;
+        type            cyclic;
+        neighbourPatch  outlet;
+        matchTolerance  1e-6;
     }
 
     outlet
     {
-        type        patch;
+        type            cyclic;
+        neighbourPatch  inlet;
+        matchTolerance  1e-6;
     }
 
     wall
